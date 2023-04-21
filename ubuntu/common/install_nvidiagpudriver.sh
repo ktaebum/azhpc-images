@@ -30,7 +30,8 @@ $COMMON_DIR/write_component_version.sh "CUDA" ${CUDA_VERSION}
 # popd
 
 # Nvidia driver
-NVIDIA_DRIVER_URL=https://us.download.nvidia.com/tesla/${NVIDIA_VERSION}/NVIDIA-Linux-x86_64-${NVIDIA_VERSION}.run
-$COMMON_DIR/download_and_verify.sh $NVIDIA_DRIVER_URL "10f6166703aeaffea237fa2d0ccacd0e9357af59b3bbc708a9097c9578509735"
-bash NVIDIA-Linux-x86_64-${NVIDIA_VERSION}.run --silent --dkms
+apt-get install nvidia-driver-470
+# NVIDIA_DRIVER_URL=https://us.download.nvidia.com/tesla/${NVIDIA_VERSION}/NVIDIA-Linux-x86_64-${NVIDIA_VERSION}.run
+# $COMMON_DIR/download_and_verify.sh $NVIDIA_DRIVER_URL "10f6166703aeaffea237fa2d0ccacd0e9357af59b3bbc708a9097c9578509735"
+# bash NVIDIA-Linux-x86_64-${NVIDIA_VERSION}.run --silent --dkms
 $COMMON_DIR/write_component_version.sh "NVIDIA" ${NVIDIA_VERSION}

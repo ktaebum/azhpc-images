@@ -14,9 +14,9 @@ pushd nccl-${NCCL_VERSION}
 make -j src.build
 make pkg.debian.build
 pushd build/pkg/deb/
-dpkg -i libnccl2_${NCCL_VERSION}+cuda11.8_amd64.deb
+dpkg -i libnccl2_${NCCL_VERSION}+cuda11.4_amd64.deb
 sudo apt-mark hold libnccl2
-dpkg -i libnccl-dev_${NCCL_VERSION}+cuda11.8_amd64.deb
+dpkg -i libnccl-dev_${NCCL_VERSION}+cuda11.4_amd64.deb
 sudo apt-mark hold libnccl-dev
 popd
 popd
